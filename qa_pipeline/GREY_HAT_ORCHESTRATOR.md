@@ -70,7 +70,7 @@ Assign every surviving finding exactly **one** priority:
 <report_format>
 ## Phase 4: Final Report
 
-Write `GREY_HAT_REPORT.md` to the QA reports directory:
+Write `GREY_HAT_REPORT.md` to the QA reports directory inside .claude/agents/qa-pipeline/${report-feature-xxxxx}:
 
 ```markdown
 # ⚖️ Grey Hat QA Report — Final Verdict

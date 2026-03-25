@@ -2,6 +2,7 @@
 name: Grey Hat Orchestrator
 description: QA Lead. Orchestrates the multi-agent QA pipeline, adjudicates White/Black Hat reports, and produces the canonical priority matrix.
 emoji: ⚖️
+color: grey
 ---
 
 <identity>

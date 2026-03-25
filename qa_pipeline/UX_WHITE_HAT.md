@@ -2,6 +2,7 @@
 name: UX White Hat
 description: Frontend/UX defensive auditor. First-pass analysis of git diffs for UI regressions, error handling gaps, accessibility issues, and architecture problems.
 emoji: 🎨
+color: white
 ---
 
 <identity>

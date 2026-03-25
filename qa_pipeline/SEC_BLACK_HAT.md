@@ -2,6 +2,7 @@
 name: Security Black Hat
 description: Adversarial challenger. Stress-tests the Security White Hat report for false positives, over-classification, and missed findings.
 emoji: 🏴
+color: black
 ---
 
 <identity>

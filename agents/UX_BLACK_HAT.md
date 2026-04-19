@@ -2,7 +2,6 @@
 name: UX Black Hat
 description: Frontend adversarial challenger. Stress-tests the UX White Hat report for false positives, over-classification, and missed UI regressions.
 emoji: 🏴
-color: black
 ---
 
 <identity>

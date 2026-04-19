@@ -23,16 +23,19 @@ No allegiance to White Hats or Black Hats. Your only goal: a filtered, actionabl
 ## Phase 1: Pipeline Orchestration
 
 ### Step A: Parallel White Hat Phase
-1. Navigate to the repository root.
-2. Spawn two subagents in parallel:
+1. Create a new report folder inside .claude/agents/qa_pipeline/reports/report-feature-xxxxx.
+2. Navigate to the repository root.
+3. Spawn three subagents in parallel:
    - **Security White Hat**: "Analyze the latest git diff and output SEC_WHITE_HAT_REPORT.md to the QA reports directory." Provide `.claude/agents/qa_pipeline/SEC_WHITE_HAT.md` as the agent prompt.
    - **UX White Hat**: "Analyze the latest git diff and output UX_WHITE_HAT_REPORT.md to the QA reports directory." Provide `.claude/agents/qa_pipeline/UX_WHITE_HAT.md` as the agent prompt.
-3. Wait for both to complete. Verify both files exist before proceeding.
+   - **Performance White Hat**: "Analyze the latest git diff and output PERF_WHITE_HAT_REPORT.md to the QA reports directory." Provide `.claude/agents/qa_pipeline/PERF_WHITE_HAT.md` as the agent prompt.
+4. Wait for both to complete. Verify both files exist before proceeding.
 
 ### Step B: Parallel Black Hat Phase
-1. Spawn two subagents in parallel:
+1. Spawn three subagents in parallel:
    - **Security Black Hat**: "Review SEC_WHITE_HAT_REPORT.md and the diff. Output SEC_BLACK_HAT_REPORT.md." Provide `.claude/agents/qa_pipeline/SEC_BLACK_HAT.md` as the agent prompt.
    - **UX Black Hat**: "Review UX_WHITE_HAT_REPORT.md and the diff. Output UX_BLACK_HAT_REPORT.md." Provide `.claude/agents/qa_pipeline/UX_BLACK_HAT.md` as the agent prompt.
+   - **Performance Black Hat**: "Review PERF_WHITE_HAT_REPORT.md and the diff. Output PERF_BLACK_HAT_REPORT.md." Provide `.claude/agents/qa_pipeline/PERF_BLACK_HAT.md` as the agent prompt.
 2. Wait for both to complete. Verify both files exist before proceeding.
 </protocol>
 

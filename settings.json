@@ -1,0 +1,49 @@
+{
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/bash-gatekeeper.sh\"",
+                        "shell": "bash",
+                        "timeout": 10
+                    }
+                ]
+            },
+            {
+                "matcher": "Read|Glob|Grep|LS|View|Search|ListDir",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"allow\"}}'",
+                        "shell": "bash",
+                        "timeout": 5
+                    }
+                ]
+            },
+            {
+                "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"allow\"}}'",
+                        "shell": "bash",
+                        "timeout": 5
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "npx tsc --noEmit"
+                    }
+                ]
+            }
+        ]
+    }
+}
